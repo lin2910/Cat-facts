@@ -11,12 +11,13 @@ public class CatFact {
                    @JsonProperty("text") String text,
                    @JsonProperty("type") Animals type,
                    @JsonProperty("user") String user,
-                   @JsonProperty("upvotes") int upvotes) {
+                   @JsonProperty("upvotes") Integer upvotes) {
+
         this.id = id;
         this.text = text;
         this.type = type;
         this.user = user;
-        this.upvotes = upvotes;
+        this.upvotes = upvotes == null ?0:upvotes;
     }
 
     public Integer getUpvotes() {
